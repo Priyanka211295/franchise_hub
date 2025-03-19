@@ -26,7 +26,7 @@ const Applications = () => {
   // 🔥 Fetch all users from API
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:1963/user/getallusers"); // Ensure the backend is running
+      const response = await axios.get("https://franchise-production-454a.up.railway.app/user/getallusers"); // Ensure the backend is running
 
       if (response.data.status) {
         setApplications(response.data.data);
@@ -37,7 +37,7 @@ const Applications = () => {
   };
 
   const handleAccept = async (uid) => {
-    let url = "http://localhost:1963/user/updateStatus";
+    let url = "https://franchise-production-454a.up.railway.app/user/updateStatus";
     try {
       let resp = await axios.post(url,
         { uid, status: 1 }, // ✅ Sending JSON body correctly
@@ -58,7 +58,7 @@ const Applications = () => {
 
 
   const handleDecline = async (uid) => {
-    let url = "http://localhost:1963/user/updateStatus";
+    let url = "https://franchise-production-454a.up.railway.app/user/updateStatus";
     try {
       let resp = await axios.post(url,
         { uid, status: -1 },
@@ -93,7 +93,7 @@ const Applications = () => {
     }
 
     let obj = { uid: uid, password: password, status: 2 };
-    let url = "http://localhost:1963/user/updateStatus";
+    let url = "https://franchise-production-454a.up.railway.app/user/updateStatus";
     try {
       const resp = await axios.post(url, obj, {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -126,7 +126,7 @@ const Applications = () => {
             alert("Error sending email to user");
           });
 
-        const saveUrl = "http://localhost:1963/franchisees/loginuser"; // Update with your backend URL
+        const saveUrl = "https://franchise-production-454a.up.railway.app/franchisees/loginuser"; // Update with your backend URL
         await axios.post(saveUrl, obj, {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
         });

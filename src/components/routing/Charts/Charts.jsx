@@ -34,7 +34,7 @@ const Charts = () => {
       }
   
       try {
-          const response = await axios.get("http://localhost:1963/franData/sales", {
+          const response = await axios.get("https://franchise-production-454a.up.railway.app/franData/sales", {
               params: { uid, startDate, endDate },
           });
   

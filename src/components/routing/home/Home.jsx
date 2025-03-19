@@ -234,7 +234,7 @@ Founder of - www.realJavaOnline.com
               <div className="relative h-6 overflow-hidden">
                 <img 
                   src="/your-profile.jpg" 
-                  alt="Your Profile" 
+                  // alt="Your Profile" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.target.onerror = null;
@@ -247,7 +247,7 @@ Founder of - www.realJavaOnline.com
                   <div className="w-16 h-16 rounded-full border-4 border-blue-600 overflow-hidden -mt-20 shadow-xl relative z-20">
                     <img 
                       src={mypic} 
-                      alt="Your Avatar" 
+                      // alt="Your Avatar" 
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         e.target.onerror = null;

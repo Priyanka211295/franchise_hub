@@ -20,7 +20,7 @@ const Today = () => {
 
   // Save today's sales data
   async function doSave() {
-    let url = "http://localhost:1963/franData/save";
+    let url = "https://franchise-production-454a.up.railway.app/franData/save";
     
     const formData = new URLSearchParams();
     Object.entries(obj).forEach(([key, value]) => formData.append(key, value));
