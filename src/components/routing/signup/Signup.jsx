@@ -26,8 +26,6 @@ const Signup = () => {
 
   function doFileChange(event) {
     setObj({...obj,["ppic"]:event.target.files[0]})
-    // const { name, files } = event.target;
-    // setObj({ ...obj, [name]: files[0] });
     prev.src = URL.createObjectURL(event.target.files[0]);
   }
 
@@ -45,14 +43,10 @@ const Signup = () => {
     } else {
       alert(resp.data.msg);
     }
-  }
-
-    
-  
+  }  
   const [darkMode, setDarkMode] = useState(false);
-
   return (
-    <div className="flex flex-col justify-center items-center w-full h-[163vh] bg-[#282D2D]">
+    <div className="flex flex-col justify-center items-center w-full h-[175vh] bg-[#282D2D]">
 
       {/* Dark Mode Toggle */}
       <div className="flex flex-col items-end justify-start overflow-hidden  xl:max-w-2xl ">
@@ -251,7 +245,7 @@ const Signup = () => {
                 <img
                   src=""
                   id="prev"
-                  className="max-w-full max-h-[200px] object-cover"
+                  className="max-w-full max-h-[100px] object-cover"
                   alt="Preview"
                 />
               </div>

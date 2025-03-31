@@ -218,14 +218,12 @@ function Home() {
                   </div>
                 </div>
                 <p className="text-blue-300 mb-6">
-                  {/* With over 25 years of experience in web development and teaching, and as the founder of realjava, he has mentored thousands of students and professionals in their journey to become successful developers. */}
                   Rajesh K. Bansal (MCA, SCJP, MCP)
                   <br></br>
 Author of the book - 📑 Real Java 
 <br></br>
 Founder of - www.realJavaOnline.com
-                </p>
-                
+                </p> 
               </div>
             </div>
             
@@ -257,21 +255,16 @@ Founder of - www.realJavaOnline.com
                   </div>
                   <div className="ml-4">
                     <h3 className="text-2xl font-bold text-white">Priyanka kansal</h3>
-                    {/* <p className="text-blue-400">Director of Franchise Development</p> */}
                      <p className="text-purple-400">Developer</p>
 
                   </div>
                 </div>
                 <p className="text-blue-300 mb-6 flex-justify-center">
-                  {/* Specializing in franchise acquisition and onboarding, Amit has helped connect over 100 entrepreneurs with their ideal franchise opportunities. His dedication to personalized support ensures every new franchisee receives the guidance they need to succeed. */}
-                {/* Priyanka kansal */}
                 M.SC 
                 </p>
-                
               </div>
             </div>
           </div>
-          
         </div>
       </section>
 

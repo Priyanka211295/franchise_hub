@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Small from './Small';
+import Sidebar from './Sidebar';
 import Today from '../routing/today/Today';
 import SalesHistory from '../routing/saleHis/SalesHistory';
 import Setting from '../routing/Setting/Setting';
 import Charts from '../routing/Charts/Charts';
 import { isAuthenticated } from '../../auth';
 
-function Big() {
+function Dashboard() {
   // Check authentication
   if (!isAuthenticated()) {
     return <Navigate to="/login" replace />;
@@ -15,7 +15,7 @@ function Big() {
 
   return (
     <div className="flex bg-gray-100 min-h-screen">
-      <Small />
+      <Sidebar />
       <div className="flex-1 p-6">
         <center>
           <h1 className="text-2xl font-bold mb-6">Welcome to Dashboard!</h1>
@@ -31,6 +31,6 @@ function Big() {
   );
 }
 
-export default Big;
+export default Dashboard;
 
 

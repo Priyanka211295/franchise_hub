@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Small() {
+function Sidebar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -10,7 +10,7 @@ function Small() {
   };
 
   const handleNavigation = (path) => {
-    navigate(`/big/${path}`);
+    navigate(`/dashboard/${path}`);
   };
 
   return (
@@ -88,6 +88,6 @@ function Small() {
   );
 }
 
-export default Small;
+export default Sidebar;
 
 

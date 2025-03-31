@@ -21,7 +21,7 @@ const Login = () => {
       if (resp.data.status) {
         localStorage.setItem('uid', obj.uid);
         alert("Login successful");
-        navigate('/big'); // This will load the dashboard at /big
+        navigate('/dashboard'); 
       } else {
         alert(resp.data.msg);
       }

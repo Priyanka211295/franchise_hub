@@ -16,8 +16,6 @@ const Applications = () => {
   const [applications, setApplications] = useState([]); // All applications
   const [activeTab, setActiveTab] = useState('pending'); // Filtered list
 
-
-
   // 🔥 Fetch users when component mounts
   useEffect(() => {
     fetchData();
