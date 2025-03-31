@@ -21,7 +21,7 @@ const Today = () => {
   // Save today's sales data
   async function doSave() {
     let url = "https://franchise-production-454a.up.railway.app/franData/save";
-    
+
     const formData = new URLSearchParams();
     Object.entries(obj).forEach(([key, value]) => formData.append(key, value));
 
@@ -35,12 +35,11 @@ const Today = () => {
   }
 
   return (
-    
+
     <div className="max-w-sm mx-auto p-4 bg-white shadow rounded-lg mt-11">
-      
+
       <h2 className="text-xl font-bold mb-4">Today's Sales</h2>
-      
-      {/* Display UID (readonly) */}
+
       <label className="block mb-2">Email Id</label>
       <input type="text" name="uid" value={obj.uid} readOnly className="w-full p-2 border rounded-lg mb-3 bg-gray-200" />
 
@@ -53,7 +52,7 @@ const Today = () => {
       <label className="block mb-2">Total Customers Visited:</label>
       <input type="number" name="cust" onChange={doUpdate} className="w-full p-2 border rounded-lg mb-3" />
 
-      <input type="button" value="Save" onClick={doSave} className="w-full bg-blue-600 text-white p-2 rounded-lg"/>
+      <input type="button" value="Save" onClick={doSave} className="w-full bg-blue-600 text-white p-2 rounded-lg" />
     </div>
   );
 };

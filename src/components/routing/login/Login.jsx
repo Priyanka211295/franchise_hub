@@ -21,7 +21,7 @@ const Login = () => {
       if (resp.data.status) {
         localStorage.setItem('uid', obj.uid);
         alert("Login successful");
-        navigate('/dashboard'); 
+        navigate('/dashboard');
       } else {
         alert(resp.data.msg);
       }

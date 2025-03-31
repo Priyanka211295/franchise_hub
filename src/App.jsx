@@ -13,13 +13,13 @@ function App() {
     <BrowserRouter>
       <TopBar />
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/home' element={<Home/>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/apply' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/adminlogin' element={<Adminlogin />} />
-        <Route path ='/application' element={<Applications/>} />
-        <Route path="/dashboard/*" element={<Dashboard/>}/>
+        <Route path='/application' element={<Applications />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

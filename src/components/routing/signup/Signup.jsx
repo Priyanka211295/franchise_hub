@@ -16,7 +16,7 @@ const Signup = () => {
     floor: "",
     dos: "",
     ppic: null,
-    owner: "",  
+    owner: "",
   });
 
   function doUpdate(event) {
@@ -25,7 +25,7 @@ const Signup = () => {
   }
 
   function doFileChange(event) {
-    setObj({...obj,["ppic"]:event.target.files[0]})
+    setObj({ ...obj, ["ppic"]: event.target.files[0] })
     prev.src = URL.createObjectURL(event.target.files[0]);
   }
 
@@ -43,7 +43,7 @@ const Signup = () => {
     } else {
       alert(resp.data.msg);
     }
-  }  
+  }
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className="flex flex-col justify-center items-center w-full h-[175vh] bg-[#282D2D]">
@@ -82,21 +82,19 @@ const Signup = () => {
             {/* First Row - Two Textboxes */}
             <div className="flex flex-col sm:flex-row gap-3">
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
+                  }`}
                 type="text" name="uid"
                 placeholder="Enter your Email Id"
                 onChange={doUpdate}
               />
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent  placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent  placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
+                  }`}
                 type="text" name="name"
                 placeholder="Enter your Name"
                 onChange={doUpdate}
@@ -106,22 +104,20 @@ const Signup = () => {
             {/* Second Row - Two Textboxes */}
             <div className="flex flex-col sm:flex-row gap-3">
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
+                  }`}
                 type="text" name="mob"
                 placeholder="Enter your Mobile No."
                 onChange={doUpdate}
               />
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
-                type="text"  name="add"
+                  }`}
+                type="text" name="add"
                 placeholder="Enter your Address"
                 onChange={doUpdate}
               />
@@ -133,22 +129,20 @@ const Signup = () => {
             </h1>
             <div className="flex flex-col sm:flex-row gap-3">
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
-                type="text"  name="eB"
+                  }`}
+                type="text" name="eB"
                 placeholder="Existing Business"
                 onChange={doUpdate}
               />
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
-                type="text"   name="since"
+                  }`}
+                type="text" name="since"
                 placeholder="Since (Year)"
                 onChange={doUpdate}
               />
@@ -160,73 +154,67 @@ const Signup = () => {
             </h1>
             <div className="flex flex-col sm:flex-row gap-3">
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
-                type="text"   name="sl"
+                  }`}
+                type="text" name="sl"
                 placeholder="Site Location"
                 onChange={doUpdate}
               />
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
-                type="text"   name="city"
+                  }`}
+                type="text" name="city"
                 placeholder="City"
                 onChange={doUpdate}
               />
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
+                  }`}
                 type="text" name="tarea"
                 placeholder="Total area"
                 onChange={doUpdate}
               />
               <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
+                  }`}
                 type="text"
                 placeholder="Pincode" name="pincode"
                 onChange={doUpdate}
               />
             </div>
 
-             {/* Date of Application */}
-             <div className="flex flex-col">
-             <input
-                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+            {/* Date of Application */}
+            <div className="flex flex-col">
+              <input
+                className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
+                  }`}
                 type="text"
                 placeholder="floor" name="floor"
                 onChange={doUpdate}
               />
               <label className="text-sm text-gray-700">Date of Application</label>
               <input
-                className={`w-full px-5 py-3 mt-2 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${
-                  darkMode
+                className={`w-full px-5 py-3 mt-2 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2 focus:outline ${darkMode
                     ? "bg-[#302E30] text-white focus:border-white"
                     : "bg-gray-100 text-black focus:border-black"
-                }`}
+                  }`}
                 type="date"
                 name="dos"
                 onChange={doUpdate}
               />
-             
+
 
             </div>
 
@@ -252,32 +240,32 @@ const Signup = () => {
             </div>
 
             <div className="flex justify-center gap-3 py-5">
-          <div>
-        Ownership &nbsp;<input
-              className="mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white align-top checked:border-4 checked:border-blue-600"
-              type="radio"
-              name="owner"  value="Owner"
-              id="radioidthree" onChange={doUpdate}
-            />
-            <label className="text-gray-800" htmlFor="radioidthree">
-              Owner
-            </label>
+              <div>
+                Ownership &nbsp;<input
+                  className="mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white align-top checked:border-4 checked:border-blue-600"
+                  type="radio"
+                  name="owner" value="Owner"
+                  id="radioidthree" onChange={doUpdate}
+                />
+                <label className="text-gray-800" htmlFor="radioidthree">
+                  Owner
+                </label>
+              </div>
+              <div>
+                <input
+                  className="mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white  align-top checked:border-4 checked:border-blue-600  disabled:border-blue-400"
+                  type="radio"
+                  name="owner" value="Rented" onChange={doUpdate}
+                  id="radioidfour"
+                />
+                <label className="text-gray-800" htmlFor="radioidfour">
+                  Rented
+                </label>
+              </div>
+            </div>
           </div>
-          <div>
-            <input
-              className="mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white  align-top checked:border-4 checked:border-blue-600  disabled:border-blue-400"
-              type="radio"
-              name="owner" value="Rented"  onChange={doUpdate}
-              id="radioidfour"
-            />
-            <label className="text-gray-800" htmlFor="radioidfour">
-              Rented
-            </label>
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center items-center flex-col">
-           
+          <div className="flex justify-center items-center flex-col">
+
 
             {/* Terms and Conditions */}
             <div className="flex justify-start items-center gap-3 mb-4">

@@ -7,21 +7,19 @@ import { nanoid } from 'nanoid';
 
 const Applications = () => {
 
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleLogout = () => {
     // localStorage.removeItem('uid');
     navigate('/home');
   };
 
-  const [applications, setApplications] = useState([]); // All applications
-  const [activeTab, setActiveTab] = useState('pending'); // Filtered list
+  const [applications, setApplications] = useState([]); 
+  const [activeTab, setActiveTab] = useState('pending'); 
 
-  // 🔥 Fetch users when component mounts
   useEffect(() => {
     fetchData();
   }, []);
 
-  // 🔥 Fetch all users from API
   const fetchData = async () => {
     try {
       const response = await axios.get("https://franchise-production-454a.up.railway.app/user/getallusers"); // Ensure the backend is running
@@ -38,8 +36,8 @@ const Applications = () => {
     let url = "https://franchise-production-454a.up.railway.app/user/updateStatus";
     try {
       let resp = await axios.post(url,
-        { uid, status: 1 }, // ✅ Sending JSON body correctly
-        { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } } // ✅ Ensure headers
+        { uid, status: 1 }, 
+        { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } } 
       );
 
       if (resp.data.status) {
@@ -76,7 +74,7 @@ const Applications = () => {
   };
 
   async function handleFranchise(uid) {
-    const password = nanoid(10); // Generate a random password
+    const password = nanoid(6); 
 
     const application = applications.find(app => app.uid === uid);
 
@@ -98,10 +96,8 @@ const Applications = () => {
       });
 
       if (resp.data.status) {
-        // Prepare email template parameters
         const templateParams = {
           uid: uid,
-          // id: email,
           password: password
         };
         console.log('Sending email with params:', templateParams);
@@ -124,13 +120,12 @@ const Applications = () => {
             alert("Error sending email to user");
           });
 
-        const saveUrl = "https://franchise-production-454a.up.railway.app/franchisees/loginuser"; // Update with your backend URL
+        const saveUrl = "https://franchise-production-454a.up.railway.app/franchisees/loginuser"; 
         await axios.post(saveUrl, obj, {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
         });
 
         alert(resp.data.msg);
-        // console.log("hi"+resp.data);
         fetchData();
       }
     } catch (error) {
@@ -153,29 +148,24 @@ const Applications = () => {
 
       <div className="flex justify-end">
         <input type="button" value="↩ Logout" onClick={handleLogout} className="flex items-center gap-2 text-l font-bold text-white bg-red-400 hover:bg-slate-400 rounded-md"
-          />
+        />
       </div>
       <br></br>
 
-        <div className="bg-gray-400 w-1300px rounded-lg">
+      <div className="bg-gray-400 w-1300px rounded-lg">
         <h1 className="text-2xl font-bold text-center">Applications</h1>
-
         <div className="flex justify-center space-x-4 mt-4">
           <input type="button" value="Pending"
             className={`px-4 py-2 rounded-lg ${activeTab === 'pending' ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
             onClick={() => setActiveTab('pending')} />
 
-
-
           <input type="button" value="Accepted"
             className={`px-4 py-2 rounded-lg ${activeTab === 'accepted' ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
             onClick={() => setActiveTab('accepted')} />
 
-
           <input type="button" value="Declined"
             className={`px-4 py-2 rounded-lg ${activeTab === 'declined' ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
             onClick={() => setActiveTab('declined')} />
-
 
           <input type="button" value="Franchise"
             className={`px-4 py-2 rounded-lg ${activeTab === 'franchise' ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}

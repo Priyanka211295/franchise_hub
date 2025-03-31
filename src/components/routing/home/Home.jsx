@@ -75,22 +75,22 @@ function Home() {
       <section ref={heroRef} className="relative h-screen overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 z-0">
-          <div 
+          <div
             className="absolute top-20 left-10 w-64 h-64 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"
-            style={{ 
-              transform: `translate(${calcParallaxOffset(20).x}px, ${calcParallaxOffset(20).y}px)` 
+            style={{
+              transform: `translate(${calcParallaxOffset(20).x}px, ${calcParallaxOffset(20).y}px)`
             }}
           ></div>
-          <div 
+          <div
             className="absolute top-40 right-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"
-            style={{ 
-              transform: `translate(${calcParallaxOffset(-30).x}px, ${calcParallaxOffset(-30).y}px)` 
+            style={{
+              transform: `translate(${calcParallaxOffset(-30).x}px, ${calcParallaxOffset(-30).y}px)`
             }}
           ></div>
-          <div 
+          <div
             className="absolute bottom-20 left-1/3 w-80 h-80 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"
-            style={{ 
-              transform: `translate(${calcParallaxOffset(40).x}px, ${calcParallaxOffset(40).y}px)` 
+            style={{
+              transform: `translate(${calcParallaxOffset(40).x}px, ${calcParallaxOffset(40).y}px)`
             }}
           ></div>
         </div>
@@ -122,14 +122,14 @@ function Home() {
                 <span className="relative z-10 text-white">POTENTIAL</span>
               </div>
             </h1>
-            
+
             {/* Animated highlight bar */}
             <div className="h-1 w-32 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8 animate-pulse"></div>
-            
+
             {/* Subheading with improved typography */}
             <p className="text-xl md:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
-            Your gateway to successful franchise ownership - Apply, Get Approved, and Start Operating            </p>
-            
+              Your gateway to successful franchise ownership - Apply, Get Approved, and Start Operating            </p>
+
             {/* Stats display with animated counters */}
             <div className="flex flex-wrap justify-center gap-8 mb-12">
               <div className="text-center p-4 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50 shadow-xl">
@@ -140,11 +140,11 @@ function Home() {
                 <div className="text-4xl font-bold text-purple-400 mb-1">24/7</div>
                 <div className="text-sm text-gray-400 uppercase tracking-wider">Expert Support</div>
               </div>
-                </div>
+            </div>
             <button className="border-2 border-purple-600 text-purple-400 font-bold py-3 px-8 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-300">
               Click on Apply Now for Franchise
             </button>
-              
+
           </div>
         </div>
       </section>
@@ -201,7 +201,7 @@ function Home() {
       <section className="py-10 bg-slate-900" id="contact">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">Meet Our Leadership Team</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Mentor/Sir's Profile Card */}
             <div className="bg-gradient-to-br h-64   from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-xl transform transition-all duration-300 hover:shadow-purple-500/20 hover:scale-105">
@@ -220,18 +220,18 @@ function Home() {
                 <p className="text-blue-300 mb-6">
                   Rajesh K. Bansal (MCA, SCJP, MCP)
                   <br></br>
-Author of the book - 📑 Real Java 
-<br></br>
-Founder of - www.realJavaOnline.com
-                </p> 
+                  Author of the book - 📑 Real Java
+                  <br></br>
+                  Founder of - www.realJavaOnline.com
+                </p>
               </div>
             </div>
-            
+
             {/* Your Profile Card */}
             <div className="bg-gradient-to-br h-64 from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-xl transform transition-all duration-300 hover:shadow-blue-500/20 hover:scale-105">
               <div className="relative h-6 overflow-hidden">
-                <img 
-                  src="/your-profile.jpg" 
+                <img
+                  src="/your-profile.jpg"
                   // alt="Your Profile" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -243,8 +243,8 @@ Founder of - www.realJavaOnline.com
               <div className="p-8">
                 <div className="flex items-center mb-4">
                   <div className="w-16 h-16 rounded-full border-4 border-blue-600 overflow-hidden -mt-20 shadow-xl relative z-20">
-                    <img 
-                      src={mypic} 
+                    <img
+                      src={mypic}
                       // alt="Your Avatar" 
                       className="w-full h-full object-cover"
                       onError={(e) => {
@@ -255,12 +255,12 @@ Founder of - www.realJavaOnline.com
                   </div>
                   <div className="ml-4">
                     <h3 className="text-2xl font-bold text-white">Priyanka kansal</h3>
-                     <p className="text-purple-400">Developer</p>
+                    <p className="text-purple-400">Developer</p>
 
                   </div>
                 </div>
                 <p className="text-blue-300 mb-6 flex-justify-center">
-                M.SC 
+                  M.SC
                 </p>
               </div>
             </div>
@@ -274,7 +274,7 @@ Founder of - www.realJavaOnline.com
         <div className="container mx-auto px-6 py-1 text-center">
           <h3 className="text-3xl font-bold text-white mb-5">Franchise Hub</h3>
           <p className="mb-3 max-w-2xl mx-auto">Your trusted partner in franchise ownership and business growth.</p>
-          
+
           {/* Social Media Icons */}
           <div className="flex justify-center space-x-6 mb-10">
             <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -322,7 +322,7 @@ Founder of - www.realJavaOnline.com
                 <li><a href="#" className="hover:text-white transition-colors">Healthcare</a></li>
               </ul>
             </div>
- </div>
+          </div>
 
           <div className="border-t border-gray-800   max-w-xl mx-auto">
           </div>
@@ -332,7 +332,7 @@ Founder of - www.realJavaOnline.com
         <div className="bg-black py-1 text-center">
           <div className="container mx-auto px-6">
             <p className="mb-1">&copy; {new Date().getFullYear()} Franchise Hub. All rights reserved.</p>
-           
+
           </div>
         </div>
       </footer>

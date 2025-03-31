@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
 function SalesHistory() {
   const [dateRanges, setDateRanges] = useState([{ startDate: '', endDate: '', salesAmount: null }]);
   const [salesData, setSalesData] = useState([]);
@@ -81,7 +80,7 @@ function SalesHistory() {
 
       {/* Display logged-in UID */}
       <div className="text-center mb-4">
-      <span className="font-semibold text-gray-700">Logged in as:</span> 
+        <span className="font-semibold text-gray-700">Logged in as:</span>
         <span className="text-blue-600 font-bold ml-2">{uid}</span>
       </div>
 
