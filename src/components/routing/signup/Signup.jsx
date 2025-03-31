@@ -30,7 +30,7 @@ const Signup = () => {
   }
 
   async function doSave() {
-    const url = "https://franchise-production-454a.up.railway.app/user/saveuser";
+    const url = "https://vigilant-vibrancy-production.up.railway.app/user/saveuser";
     const fd = new FormData();
 
     for (let prop in obj) {

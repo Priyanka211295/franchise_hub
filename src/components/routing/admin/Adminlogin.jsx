@@ -25,7 +25,7 @@ const Adminlogin = () => {
       return;
     }
     try {
-      let url = "https://franchise-production-454a.up.railway.app/admin/login";
+      let url = "https://vigilant-vibrancy-production.up.railway.app/admin/login";
       let resp = await axios.post(url, obj, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       });

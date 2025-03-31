@@ -22,7 +22,7 @@ const Applications = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("https://franchise-production-454a.up.railway.app/user/getallusers"); // Ensure the backend is running
+      const response = await axios.get("https://vigilant-vibrancy-production.up.railway.app/user/getallusers"); // Ensure the backend is running
 
       if (response.data.status) {
         setApplications(response.data.data);
@@ -33,7 +33,7 @@ const Applications = () => {
   };
 
   const handleAccept = async (uid) => {
-    let url = "https://franchise-production-454a.up.railway.app/user/updateStatus";
+    let url = "https://vigilant-vibrancy-production.up.railway.app/user/updateStatus";
     try {
       let resp = await axios.post(url,
         { uid, status: 1 }, 
@@ -54,7 +54,7 @@ const Applications = () => {
 
 
   const handleDecline = async (uid) => {
-    let url = "https://franchise-production-454a.up.railway.app/user/updateStatus";
+    let url = "https://vigilant-vibrancy-production.up.railway.app/user/updateStatus";
     try {
       let resp = await axios.post(url,
         { uid, status: -1 },
@@ -89,7 +89,7 @@ const Applications = () => {
     }
 
     let obj = { uid: uid, password: password, status: 2 };
-    let url = "https://franchise-production-454a.up.railway.app/user/updateStatus";
+    let url = "https://vigilant-vibrancy-production.up.railway.app/user/updateStatus";
     try {
       const resp = await axios.post(url, obj, {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -120,7 +120,7 @@ const Applications = () => {
             alert("Error sending email to user");
           });
 
-        const saveUrl = "https://franchise-production-454a.up.railway.app/franchisees/loginuser"; 
+        const saveUrl = "https://vigilant-vibrancy-production.up.railway.app/franchisees/loginuser"; 
         await axios.post(saveUrl, obj, {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
         });

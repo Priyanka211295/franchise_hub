@@ -33,7 +33,7 @@ const Charts = () => {
         }
 
         try {
-            const response = await axios.get("https://franchise-production-454a.up.railway.app/franData/sales", {
+            const response = await axios.get("https://vigilant-vibrancy-production.up.railway.app/franData/sales", {
                 params: { uid, startDate, endDate },
             });
 

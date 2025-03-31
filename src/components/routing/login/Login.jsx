@@ -13,7 +13,7 @@ const Login = () => {
 
   async function doSave() {
     try {
-      let url = "https://franchise-production-454a.up.railway.app/franchisees/checkuser";
+      let url = "https://vigilant-vibrancy-production.up.railway.app/franchisees/checkuser";
       let resp = await axios.post(url, obj, {
         headers: { 'Content-Type': 'application/json' }
       });

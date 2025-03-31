@@ -27,7 +27,7 @@ function Setting({ onClose }) {
     }
 
     try {
-      const response = await axios.post("https://franchise-production-454a.up.railway.app/auth/updatepassword",
+      const response = await axios.post("https://vigilant-vibrancy-production.up.railway.app/auth/updatepassword",
         {
           uid,
           oldPassword,
